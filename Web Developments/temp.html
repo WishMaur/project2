@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determining Wavelength Using Diffraction Grating</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border: 5px solid maroon;
+            border-radius: 10px;
+        }
+        .header {
+            background: #5a6872;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .experiment-area {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .display-area {
+            width: 70%;
+            height: 400px;
+            background: white;
+            border: 2px solid maroon;
+            border-radius: 5px;
+        }
+        .controls {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .start { background: yellow; }
+        .stop { background: red; color: white; }
+        .blue-btn { background: lightblue; }
+        .reset { background: pink; }
+        .message-box {
+            background: maroon;
+            color: white;
+            padding: 10px;
+            height: 100px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Determining Wavelength Using Diffraction Grating</div>
+        <div class="experiment-area">
+            <div class="display-area"></div>
+            <div class="controls">
+                <button class="blue-btn" onclick="updateMessage('Ruler Added')">Ruler</button>
+                <button class="blue-btn" onclick="updateMessage('Laser Source Added')">Laser Source</button>
+                <button class="blue-btn" onclick="updateMessage('Grating Added')">Grating</button>
+                <button class="blue-btn" onclick="updateMessage('Screen Added')">Screen</button>
+                <button class="start" onclick="startSimulation()">Turn On (Layer On)</button>
+                <button class="stop" onclick="stopSimulation()">Turn Off (Layer Off)</button>
+                <button class="reset" onclick="resetSimulation()">Reset for All</button>
+            </div>
+        </div>
+        <div class="message-box" id="message">>> Simulator Stopped</div>
+    </div>
+    
+    <script>
+        function startSimulation() {
+            document.getElementById("message").innerText = ">> Simulator Running";
+        }
+        function stopSimulation() {
+            document.getElementById("message").innerText = ">> Simulator Stopped";
+        }
+        function resetSimulation() {
+            document.getElementById("message").innerText = ">> Simulator Reset";
+        }
+        function updateMessage(text) {
+            document.getElementById("message").innerText = ">> " + text;
+        }
+    </script>
+</body>
+</html>

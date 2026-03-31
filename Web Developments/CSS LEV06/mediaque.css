@@ -1,0 +1,32 @@
+h3{
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+@media(width:400px) {
+    h3{
+        background-color: palevioletred;
+    }   
+}
+@media(min-width:700px) {
+    h3{
+        background-color: rgba(255, 255, 0, 0.804);
+    }   
+}
+@media(max-width:300px) {
+    h3{
+        background-color: rgba(119, 255, 0, 0.719);
+    }   
+}
+@media (min-width:400px ) and (max-width:600px) {
+    h3{
+        background-color: rgba(255, 0, 0, 0.719);
+    }   
+}
+
+@media(orientation:landscape){
+    h3{
+        color: white;
+        background-color: bisque;
+    }
+}

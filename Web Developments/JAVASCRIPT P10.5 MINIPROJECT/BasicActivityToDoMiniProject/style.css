@@ -1,0 +1,40 @@
+div{
+    height: 400px;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.54);
+    text-align: center;
+    background-color:lightgray;
+}
+h1{
+    letter-spacing: 2px;
+}
+
+ul{
+    text-align: start;
+    margin-left: 15px;
+}
+
+button {
+    padding: 2px 8px;
+    border: none;
+    border-radius: 8px;
+    /* background-color: #4CAF50; */
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#add{
+    color:green; 
+}
+
+.delete{
+    color: darkred;
+}
+#add:hover {
+    background-color: #45a049;
+    color: white;
+}
+.delete:hover {
+    background: #cc0000;
+    color: white;
+}
